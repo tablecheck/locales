@@ -1,0 +1,30 @@
+import { Locale, LocaleCode } from '../types';
+
+export const japanese: Locale = {
+  code: LocaleCode.Japanese,
+  facebook: 'ja_JP',
+  label: '日本語',
+  loadingText: '読み込み中・・・',
+  postCodePrefix: '〒',
+  translations: {
+    ar: 'アラビア語',
+    de: 'ドイツ語',
+    en: '英語',
+    es: 'スペイン語',
+    fr: 'フランス語',
+    id: 'インドネシア語',
+    it: 'イタリア語',
+    ja: '‪日本語‬',
+    ko: '韓国語‬',
+    lo: 'ラオ語',
+    ms: 'マレー語',
+    pt: 'ポルトガル語',
+    ru: 'ロシア語',
+    th: 'タイ語',
+    tl: 'フィリピン語',
+    tr: 'トルコ語',
+    vi: 'ベトナム語',
+    'zh-CN': '中国語(簡体)',
+    'zh-TW': '中国語(繁体)'
+  }
+};
