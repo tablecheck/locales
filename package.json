@@ -14,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/tablecheck/locales/issues"
   },
-  "homepage": "https://github.com/tablecheck/locales#readme"
+  "homepage": "https://github.com/tablecheck/locales#readme",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
 }
