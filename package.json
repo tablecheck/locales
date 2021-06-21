@@ -1,10 +1,14 @@
 {
   "name": "@tablecheck/locales",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TableCheck's shared locale definition files",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tablecheck/locales.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublish": "tsc"
   },
   "keywords": [
     "locales"
@@ -14,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/tablecheck/locales/issues"
   },
-  "homepage": "https://github.com/tablecheck/locales#readme"
+  "homepage": "https://github.com/tablecheck/locales#readme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "typescript": "4.2.4"
+  }
 }
