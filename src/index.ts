@@ -21,8 +21,6 @@ import { Locale, LocaleCode } from './types';
 
 export * from './types';
 
-export const DEFAULT_LOCALE_CODE = LocaleCode.English;
-
 /**
  * Priority ordered array of locales
  */
@@ -46,6 +44,22 @@ export const ordered: Locale[] = [
   vietnamese,
   arabic
 ];
+
+/**
+ * Returns the correct default locale
+ */
+export function getDefaultLocale(selectableLocales?: LocaleCode[]) {
+  const locales: Locale[] = selectableLocales ? ordered.filter((item: Locale) =>
+      selectableLocales.find((locale) => locale === item.code)) : ordered;
+
+  const englishLocale = locales.find(locale => locale.code === LocaleCode.English);
+  if (englishLocale) return englishLocale;
+
+  const japaneseLocale = locales.find(locale => locale.code === LocaleCode.Japanese);
+  if (japaneseLocale) return japaneseLocale;
+
+  return locales[0];
+}
 
 /**
  * Priority ordered array of LocaleCodes
