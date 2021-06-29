@@ -1,6 +1,6 @@
 {
   "name": "@tablecheck/locales",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TableCheck's shared locale definition files",
   "repository": {
     "type": "git",
@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "publish": "npm run build && npm publish --access public",
     "prepublish": "tsc"
   },
   "keywords": [
