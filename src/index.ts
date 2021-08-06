@@ -48,14 +48,21 @@ export const ordered: Locale[] = [
 /**
  * Returns the correct default locale
  */
-export function getDefaultLocale(selectableLocales?: LocaleCode[]) {
-  const locales: Locale[] = selectableLocales ? ordered.filter((item: Locale) =>
-      selectableLocales.find((locale) => locale === item.code)) : ordered;
+export function getDefaultLocale(selectableLocales?: LocaleCode[]): Locale {
+  const locales: Locale[] = selectableLocales
+    ? ordered.filter((item: Locale) =>
+        selectableLocales.find((locale) => locale === item.code)
+      )
+    : ordered;
 
-  const englishLocale = locales.find(locale => locale.code === LocaleCode.English);
+  const englishLocale = locales.find(
+    (locale) => locale.code === LocaleCode.English
+  );
   if (englishLocale) return englishLocale;
 
-  const japaneseLocale = locales.find(locale => locale.code === LocaleCode.Japanese);
+  const japaneseLocale = locales.find(
+    (locale) => locale.code === LocaleCode.Japanese
+  );
   if (japaneseLocale) return japaneseLocale;
 
   return locales[0];
@@ -67,6 +74,14 @@ export function getDefaultLocale(selectableLocales?: LocaleCode[]) {
 export const orderedLocales: LocaleCode[] = ordered.map(
   (locale) => locale.code
 );
+
+/**
+ * Re-order and filter a list of locales to match the default order
+ * @param locales
+ */
+export function orderLocales(locales: LocaleCode[]): LocaleCode[] {
+  return orderedLocales.filter((locale) => locales.indexOf(locale) >= 0);
+}
 
 /**
  * All locales
