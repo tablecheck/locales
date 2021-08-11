@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/tablecheck/locales/issues"
   },
+  "files": [
+    "lib"
+  ],
   "version": "1.1.0",
   "keywords": [
     "locales"
