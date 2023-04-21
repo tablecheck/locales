@@ -1,3 +1,21 @@
+# v1.1.2 (Fri Apr 21 2023)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Wahid Farid ([@wahidfarid](https://github.com/wahidfarid)), for all your work!
+
+#### 🐛 Bug Fix
+
+- fix(german): locale spellings [#6](https://github.com/tablecheck/locales/pull/6) ([@wahidfarid](https://github.com/wahidfarid))
+- ci: setup the auto release with correct setup [#5](https://github.com/tablecheck/locales/pull/5) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 2
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+- Wahid Farid ([@wahidfarid](https://github.com/wahidfarid))
+
+---
+
 # v1.1.1 (Wed Aug 11 2021)
 
 #### 🐛 Bug Fix
