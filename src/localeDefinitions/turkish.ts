@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const turkish: Locale = {
-  code: LocaleCode.Turkish,
+export const turkish = {
+  code: 'tr',
   facebook: 'tr_TR',
   label: 'Türkçe',
   loadingText: 'Yükleniyor...',
@@ -26,4 +26,5 @@ export const turkish: Locale = {
     'zh-CN': 'Basitleştirilmiş Çince',
     'zh-TW': 'Çin geleneği'
   }
-};
+} as const;
+localeTypeCheck(turkish);

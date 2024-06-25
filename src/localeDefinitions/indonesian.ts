@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const indonesian: Locale = {
-  code: LocaleCode.Indonesian,
+export const indonesian = {
+  code: 'id',
   facebook: 'id_ID',
   label: 'Bahasa Indonesia',
   loadingText: 'Pemuatan...',
@@ -26,4 +26,5 @@ export const indonesian: Locale = {
     'zh-CN': 'Bahasa Cina (diseder.)',
     'zh-TW': 'Bahasa Cina (trad.)'
   }
-};
+} as const;
+localeTypeCheck(indonesian);

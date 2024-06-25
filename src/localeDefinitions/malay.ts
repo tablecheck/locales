@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const malay: Locale = {
-  code: LocaleCode.Malay,
+export const malay = {
+  code: 'ms',
   facebook: 'ms_MY',
   label: 'Bahasa Melayu',
   loadingText: 'Memuatkan...',
@@ -26,4 +26,6 @@ export const malay: Locale = {
     'zh-CN': '‪Bahasa Cina (dimudah.)',
     'zh-TW': '‪Bahasa Cina (trad.)'
   }
-};
+} as const;
+
+localeTypeCheck(malay);

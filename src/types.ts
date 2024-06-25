@@ -1,34 +1,12 @@
-export enum LocaleCode {
-  Arabic = 'ar',
-  ChineseSimplified = 'zh-CN',
-  ChineseTraditional = 'zh-TW',
-  English = 'en',
-  French = 'fr',
-  German = 'de',
-  Indonesian = 'id',
-  Italian = 'it',
-  Japanese = 'ja',
-  Korean = 'ko',
-  Lao = 'lo',
-  Malay = 'ms',
-  Portuguese = 'pt',
-  Russian = 'ru',
-  Spanish = 'es',
-  Tagalog = 'tl',
-  Thai = 'th',
-  Turkish = 'tr',
-  Vietnamese = 'vi'
-}
-
 export interface Locale {
   /**
    * Optional locale ISO codes that should resolve to this one
    */
-  aliases?: string[];
+  aliases?: readonly string[];
   /**
    * The ISO code of the locale
    */
-  code: LocaleCode;
+  code: string;
   /**
    * Writing direction, if not defined assume 'ltr'
    */
@@ -57,6 +35,9 @@ export interface Locale {
    * All locale names in this language
    */
   translations: {
-    [key in LocaleCode]: string;
+    [key: string]: string;
   };
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export function localeTypeCheck(locale: Readonly<Locale>): void {}

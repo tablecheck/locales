@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const italian: Locale = {
-  code: LocaleCode.Italian,
+export const italian = {
+  code: 'it',
   facebook: 'it_IT',
   label: 'Italiano',
   loadingText: 'Caricamento in corso...',
@@ -26,4 +26,5 @@ export const italian: Locale = {
     'zh-CN': '‪Chinese (simp.)',
     'zh-TW': '‪Chinese (trad.)'
   }
-};
+} as const;
+localeTypeCheck(italian);
