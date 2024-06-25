@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const vietnamese: Locale = {
-  code: LocaleCode.Vietnamese,
+export const vietnamese = {
+  code: 'vi',
   facebook: 'vi_VN',
   label: 'Tiếng việt',
   loadingText: 'Tải...',
@@ -26,4 +26,5 @@ export const vietnamese: Locale = {
     'zh-CN': '‪Tiếng Trung (Giản thể)‬‬‬',
     'zh-TW': 'Tiếng Trung (Phồn thể)‬'
   }
-};
+} as const;
+localeTypeCheck(vietnamese);

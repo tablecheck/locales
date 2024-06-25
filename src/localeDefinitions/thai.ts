@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const thai: Locale = {
-  code: LocaleCode.Thai,
+export const thai = {
+  code: 'th',
   facebook: 'th_TH',
   label: 'ไทย',
   loadingText: 'กำลังโหลด...',
@@ -26,4 +26,5 @@ export const thai: Locale = {
     'zh-CN': '‪ภาษาจีน (กลาง)‬',
     'zh-TW': '‪ภาษาจีน (ดั้งเดิม)‬‬‬‬'
   }
-};
+} as const;
+localeTypeCheck(thai);

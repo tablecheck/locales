@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const chineseSimplified: Locale = {
-  code: LocaleCode.ChineseSimplified,
+export const chineseSimplified = {
+  code: 'zh-CN',
   facebook: 'zh_CN',
   label: '简体中文',
   loadingText: '上传中・・・',
@@ -27,4 +27,5 @@ export const chineseSimplified: Locale = {
     'zh-CN': '‪简体中文‬',
     'zh-TW': '繁体中文'
   }
-};
+} as const;
+localeTypeCheck(chineseSimplified);

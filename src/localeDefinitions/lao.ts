@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const lao: Locale = {
-  code: LocaleCode.Lao,
+export const lao = {
+  code: 'lo',
   facebook: 'lo_LA',
   label: 'ພາສາລາວ',
   loadingText: 'ກຳ ລັງໂຫລດ ...',
@@ -26,4 +26,5 @@ export const lao: Locale = {
     'zh-CN': '‪ພາສາຈີນ (ກາງ)‬',
     'zh-TW': '‪ພາສາຈີນ (ດັ້ງເດີມ)‬‬‬‬'
   }
-};
+} as const;
+localeTypeCheck(lao);

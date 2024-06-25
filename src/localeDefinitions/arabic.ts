@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const arabic: Locale = {
-  code: LocaleCode.Arabic,
+export const arabic = {
+  code: 'ar',
   facebook: 'ar_AR',
   label: 'عربى',
   loadingText: 'جار التحميل...',
@@ -27,4 +27,5 @@ export const arabic: Locale = {
     'zh-CN': 'الصينية (المبسيطة)',
     'zh-TW': 'الصينية (التقليدية)'
   }
-};
+} as const;
+localeTypeCheck(arabic);

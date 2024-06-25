@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const korean: Locale = {
-  code: LocaleCode.Korean,
+export const korean = {
+  code: 'ko',
   facebook: 'ko_KR',
   label: '한국어',
   loadingText: '로딩 중...',
@@ -26,4 +26,5 @@ export const korean: Locale = {
     'zh-CN': '중국어 (간체)',
     'zh-TW': '중국어 (번체)'
   }
-};
+} as const;
+localeTypeCheck(korean);

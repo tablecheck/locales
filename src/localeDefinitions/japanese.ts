@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const japanese: Locale = {
-  code: LocaleCode.Japanese,
+export const japanese = {
+  code: 'ja',
   facebook: 'ja_JP',
   label: '日本語',
   loadingText: '読み込み中・・・',
@@ -27,4 +27,5 @@ export const japanese: Locale = {
     'zh-CN': '中国語(簡体)',
     'zh-TW': '中国語(繁体)'
   }
-};
+} as const;
+localeTypeCheck(japanese);

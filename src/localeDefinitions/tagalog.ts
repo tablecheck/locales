@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const tagalog: Locale = {
-  code: LocaleCode.Tagalog,
+export const tagalog = {
+  code: 'tl',
   facebook: 'tl_PH',
   label: 'Tagalog',
   loadingText: 'Naglo-load...',
@@ -28,4 +28,5 @@ export const tagalog: Locale = {
     'zh-CN': 'Tsino (Pinasimple)',
     'zh-TW': 'Tsino (Tradisyonal)'
   }
-};
+} as const;
+localeTypeCheck(tagalog);

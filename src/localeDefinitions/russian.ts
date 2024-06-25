@@ -1,7 +1,7 @@
-import { Locale, LocaleCode } from '../types';
+import { localeTypeCheck } from '../types';
 
-export const russian: Locale = {
-  code: LocaleCode.Russian,
+export const russian = {
+  code: 'ru',
   facebook: 'ru_RU',
   label: 'Русский',
   loadingText: 'Загрузка...',
@@ -26,4 +26,5 @@ export const russian: Locale = {
     'zh-CN': '‪Китайский (Упр.)‬',
     'zh-TW': '‪Китайский (Трад.)‬'
   }
-};
+} as const;
+localeTypeCheck(russian);

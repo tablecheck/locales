@@ -15,16 +15,9 @@ import { russian } from './localeDefinitions/russian';
 import { spanish } from './localeDefinitions/spanish';
 import { tagalog } from './localeDefinitions/tagalog';
 import { thai } from './localeDefinitions/thai';
-import { turkish } from './localeDefinitions/turkish';
 import { vietnamese } from './localeDefinitions/vietnamese';
-import { Locale, LocaleCode } from './types';
 
-export * from './types';
-
-/**
- * Priority ordered array of locales
- */
-export const ordered: Locale[] = [
+export const locales = {
   english,
   japanese,
   korean,
@@ -43,71 +36,74 @@ export const ordered: Locale[] = [
   lao,
   vietnamese,
   arabic
+} as const;
+
+/**
+ * Priority ordered array of locales
+ */
+export const ordered: typeof locales[keyof typeof locales][] = [
+  locales.english,
+  locales.japanese,
+  locales.korean,
+  locales.chineseSimplified,
+  locales.chineseTraditional,
+  locales.german,
+  locales.spanish,
+  locales.french,
+  locales.italian,
+  locales.indonesian,
+  locales.malay,
+  locales.portuguese,
+  locales.russian,
+  locales.tagalog,
+  locales.thai,
+  locales.lao,
+  locales.vietnamese,
+  locales.arabic
 ];
+
+export type LocaleCode = typeof ordered[number]['code'];
 
 /**
  * Returns the correct default locale
  */
-export function getDefaultLocale(selectableLocales?: LocaleCode[]): Locale {
-  const locales: Locale[] = selectableLocales
-    ? ordered.filter((item: Locale) =>
+export function getDefaultLocale(
+  selectableLocales?: LocaleCode[]
+): typeof ordered[number] {
+  const filteredLocales = selectableLocales
+    ? ordered.filter((item) =>
         selectableLocales.find((locale) => locale === item.code)
       )
     : ordered;
 
-  const englishLocale = locales.find(
-    (locale) => locale.code === LocaleCode.English
-  );
+  const englishLocale = filteredLocales.find((locale) => locale.code === 'en');
   if (englishLocale) return englishLocale;
 
-  const japaneseLocale = locales.find(
-    (locale) => locale.code === LocaleCode.Japanese
-  );
+  const japaneseLocale = filteredLocales.find((locale) => locale.code === 'ja');
   if (japaneseLocale) return japaneseLocale;
 
-  return locales[0];
+  return filteredLocales[0];
 }
 
 /**
- * Priority ordered array of LocaleCodes
+ * Priority ordered array of ISO 639-1 locale codes
  */
-export const orderedLocales: LocaleCode[] = ordered.map(
+export const orderedLocaleCodes: LocaleCode[] = ordered.map(
   (locale) => locale.code
 );
 
 /**
  * Re-order and filter a list of locales to match the default order
- * @param locales
+ * @param localesToOrder
  */
-export function orderLocales(locales: LocaleCode[]): LocaleCode[] {
-  return orderedLocales.filter((locale) => locales.indexOf(locale) >= 0);
+export function orderLocales(localesToOrder: LooseLocaleCode[]): LocaleCode[] {
+  return orderedLocaleCodes.filter(
+    (locale) => localesToOrder.indexOf(locale) >= 0
+  );
 }
 
-/**
- * All locales
- * @type {Object} keys are locale codes, values are Locale objects
- */
-export const locales: { [key in LocaleCode]: Locale } = {
-  [LocaleCode.English]: english,
-  [LocaleCode.Japanese]: japanese,
-  [LocaleCode.Korean]: korean,
-  [LocaleCode.ChineseSimplified]: chineseSimplified,
-  [LocaleCode.ChineseTraditional]: chineseTraditional,
-  [LocaleCode.German]: german,
-  [LocaleCode.Spanish]: spanish,
-  [LocaleCode.French]: french,
-  [LocaleCode.Italian]: italian,
-  [LocaleCode.Indonesian]: indonesian,
-  [LocaleCode.Malay]: malay,
-  [LocaleCode.Portuguese]: portuguese,
-  [LocaleCode.Russian]: russian,
-  [LocaleCode.Tagalog]: tagalog,
-  [LocaleCode.Thai]: thai,
-  [LocaleCode.Lao]: lao,
-  [LocaleCode.Vietnamese]: vietnamese,
-  [LocaleCode.Arabic]: arabic,
-  [LocaleCode.Turkish]: turkish
-};
+// eslint-disable-next-line @typescript-eslint/ban-types -- this supports autocomplete of only LocaleCode values but is typed as string
+type LooseLocaleCode = LocaleCode | (string & {});
 
 /**
  * Function to check if a locale is CJK - Chinese/Japanese/Korean.
@@ -115,11 +111,11 @@ export const locales: { [key in LocaleCode]: Locale } = {
  * use chinese characters or their derivatives
  * @param locale
  */
-export function isCJKLocale(locale: LocaleCode): boolean {
+export function isCJKLocale(locale: LooseLocaleCode): boolean {
   return (
-    locale === LocaleCode.Japanese ||
-    locale === LocaleCode.Korean ||
-    locale === LocaleCode.ChineseSimplified ||
-    locale === LocaleCode.ChineseTraditional
+    locale === japanese.code ||
+    locale === korean.code ||
+    locale === chineseSimplified.code ||
+    locale === chineseTraditional.code
   );
 }
