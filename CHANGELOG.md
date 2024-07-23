@@ -1,3 +1,15 @@
+# v2.0.0 (Tue Jul 23 2024)
+
+#### 💥 Breaking Change
+
+- fix!: remove LocaleCode enum [#7](https://github.com/tablecheck/locales/pull/7) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v1.1.2 (Fri Apr 21 2023)
 
 :tada: This release contains work from a new contributor! :tada:
