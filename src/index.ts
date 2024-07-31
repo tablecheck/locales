@@ -106,6 +106,46 @@ export function orderLocales(localesToOrder: LooseLocaleCode[]): LocaleCode[] {
 type LooseLocaleCode = LocaleCode | (string & {});
 
 /**
+ * Check if the string is a valid `LocaleCode`
+ * @param locale
+ * @returns true if the locale is a valid `LocaleCode`
+ *
+ * @example
+ *
+ * ```ts
+ *   const locale: string = 'en';
+ *   if (isLocaleCode(locale)) {
+ *     const typedLocale: LocaleCode = locale; // no error
+ *   }
+ *   const typedLocale2: LocaleCode = locale; // error as locale is string
+ * ```
+ */
+export function isLocaleCode(locale: LooseLocaleCode): locale is LocaleCode {
+  return orderedLocaleCodes.includes(locale as LocaleCode);
+}
+
+/**
+ * Use this function to assert that a `string` is a valid `LocaleCode`
+ * @param locale
+ * @throws Error if the locale is not a valid `LocaleCode`
+ *
+ * @example
+ *
+ * ```ts
+ *   const locale: string = 'en';
+ *   assertLocaleCode(locale);
+ *   const typedLocale: LocaleCode = locale; // no error as locale is now LocaleCode typed
+ * ```
+ */
+export function assertLocaleCode(
+  locale: LooseLocaleCode
+): asserts locale is LocaleCode {
+  if (!orderedLocaleCodes.includes(locale as LocaleCode)) {
+    throw new Error(`Invalid Locale Code: ${locale}`);
+  }
+}
+
+/**
  * Function to check if a locale is CJK - Chinese/Japanese/Korean.
  * Often logic is set to be different in these three language types as they
  * use chinese characters or their derivatives
