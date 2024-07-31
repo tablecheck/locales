@@ -1,3 +1,15 @@
+# v2.1.0 (Wed Jul 31 2024)
+
+#### 🚀 Enhancement
+
+- feat: add assertion helper functions [#8](https://github.com/tablecheck/locales/pull/8) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.0.0 (Tue Jul 23 2024)
 
 #### 💥 Breaking Change
