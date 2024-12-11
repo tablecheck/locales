@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const malay = {
   code: 'ms',
@@ -24,8 +24,6 @@ export const malay = {
     tr: 'Bahasa Turki',
     vi: 'Bahasa Vietnam',
     'zh-CN': '‪Bahasa Cina (dimudah.)',
-    'zh-TW': '‪Bahasa Cina (trad.)'
-  }
-} as const;
-
-localeTypeCheck(malay);
+    'zh-TW': '‪Bahasa Cina (trad.)',
+  },
+} as const satisfies Locale;

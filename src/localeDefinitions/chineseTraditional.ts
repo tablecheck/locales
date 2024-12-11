@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const chineseTraditional = {
   code: 'zh-TW',
@@ -25,7 +25,6 @@ export const chineseTraditional = {
     tr: '土耳其語',
     vi: '越南語',
     'zh-CN': '‪簡體中文‬',
-    'zh-TW': '繁體中文'
-  }
-} as const;
-localeTypeCheck(chineseTraditional);
+    'zh-TW': '繁體中文',
+  },
+} as const satisfies Locale;

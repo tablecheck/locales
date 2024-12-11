@@ -1,10 +1,11 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const indonesian = {
   code: 'id',
   facebook: 'id_ID',
   label: 'Bahasa Indonesia',
   loadingText: 'Pemuatan...',
+  aliases: ['in-ID'],
   translations: {
     ar: 'Bahasa Arab',
     de: 'Bahasa Jerman',
@@ -24,7 +25,6 @@ export const indonesian = {
     tr: 'Bahasa Turki',
     vi: 'Bahasa Vietnam',
     'zh-CN': 'Bahasa Cina (diseder.)',
-    'zh-TW': 'Bahasa Cina (trad.)'
-  }
-} as const;
-localeTypeCheck(indonesian);
+    'zh-TW': 'Bahasa Cina (trad.)',
+  },
+} as const satisfies Locale;

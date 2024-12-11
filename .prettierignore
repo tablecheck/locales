@@ -7,3 +7,6 @@ styleguide
 coverage
 docs
 CHANGELOG.md
+.husky
+.autorc
+.all-contributorsrc
