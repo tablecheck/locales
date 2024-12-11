@@ -10,14 +10,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  setup:
+  checks:
     runs-on: ubuntu-latest
     outputs:
       nvmrc: ${{ steps.nvm.outputs.nvmrc }}
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
 
       - name: Read .nvmrc
@@ -31,67 +33,29 @@ jobs:
           cache: npm
 
       - name: Install 🔧
-        run: npm ci --legacy-peer-deps
-
-  lint:
-    needs: [setup]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ needs.setup.outputs.nvmrc }}
-          cache: npm
-
-      - name: Restore npm installs and Lerna setup
-        run: npm ci --legacy-peer-deps
+        run: npm ci --ignore-scripts
 
       - name: Validate all commits from PR
         run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
 
+      - name: Check formatting
+        run: npx prettier --check .
+
       - name: Run linter
         run: npm run lint
 
-  #  test:
-  #    needs: [setup]
-  #    runs-on: ubuntu-latest
-  #    steps:
-  #      - name: Checkout 🛎️
-  #        uses: actions/checkout@v2
-  #        with:
-  #          fetch-depth: 0
-  #
-  #      - name: Setup Node.js
-  #        uses: actions/setup-node@v2
-  #        with:
-  #          node-version: ${{ needs.setup.outputs.nvmrc }}
-  #          cache: npm
-  #
-  #      - name: Restore npm installs and Lerna setup
-  #        run: npm i --legacy-peer-deps
-  #
-  #      - name: Run Tests
-  #        run: npm test
-  #
-  #      - name: Publish Unit Test Results
-  #        uses: EnricoMi/publish-unit-test-result-action@v1
-  #        if: always()
-  #        with:
-  #          files: junit/**/*.xml
+      - name: Run Tests
+        run: npm test
 
   release:
     runs-on: ubuntu-latest
-    needs: [lint]
-    #    needs: [test, lint]
+    needs: [checks]
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
           fetch-depth: 0
 
       - name: Read .nvmrc

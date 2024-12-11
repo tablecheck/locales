@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const japanese = {
   code: 'ja',
@@ -25,7 +25,6 @@ export const japanese = {
     tr: 'トルコ語',
     vi: 'ベトナム語',
     'zh-CN': '中国語(簡体)',
-    'zh-TW': '中国語(繁体)'
-  }
-} as const;
-localeTypeCheck(japanese);
+    'zh-TW': '中国語(繁体)',
+  },
+} as const satisfies Locale;

@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const thai = {
   code: 'th',
@@ -24,7 +24,6 @@ export const thai = {
     tr: 'ภาษาตุรกี',
     vi: 'ภาษาเวียดนาม',
     'zh-CN': '‪ภาษาจีน (กลาง)‬',
-    'zh-TW': '‪ภาษาจีน (ดั้งเดิม)‬‬‬‬'
-  }
-} as const;
-localeTypeCheck(thai);
+    'zh-TW': '‪ภาษาจีน (ดั้งเดิม)‬‬‬‬',
+  },
+} as const satisfies Locale;

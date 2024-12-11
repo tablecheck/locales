@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const tagalog = {
   code: 'tl',
@@ -26,7 +26,6 @@ export const tagalog = {
     tr: 'Turko',
     vi: 'Vietnamese',
     'zh-CN': 'Tsino (Pinasimple)',
-    'zh-TW': 'Tsino (Tradisyonal)'
-  }
-} as const;
-localeTypeCheck(tagalog);
+    'zh-TW': 'Tsino (Tradisyonal)',
+  },
+} as const satisfies Locale;
