@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const vietnamese = {
   code: 'vi',
@@ -24,7 +24,6 @@ export const vietnamese = {
     tr: 'Tiếng Thổ Nhĩ Kỳ',
     vi: 'Tiếng Việt',
     'zh-CN': '‪Tiếng Trung (Giản thể)‬‬‬',
-    'zh-TW': 'Tiếng Trung (Phồn thể)‬'
-  }
-} as const;
-localeTypeCheck(vietnamese);
+    'zh-TW': 'Tiếng Trung (Phồn thể)‬',
+  },
+} as const satisfies Locale;

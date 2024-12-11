@@ -11,14 +11,14 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          fetch-depth: 0
 
       - name: Prepare repository
         run: git fetch --unshallow --prune --tags
-
-      - name: Unset header
-        # checkout@v2 adds a header that makes branch protection report errors ):
-        run: git config --local --unset http.https://github.com/.extraheader
 
       - name: Read .nvmrc
         id: nvm
@@ -32,9 +32,6 @@ jobs:
 
       - name: Install 🔧
         run: npm ci --legacy-peer-deps
-
-      #      - name: Run Tests
-      #        run: npm test
 
       - name: Create Release ✨
         env:

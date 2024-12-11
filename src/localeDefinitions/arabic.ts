@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const arabic = {
   code: 'ar',
@@ -25,7 +25,6 @@ export const arabic = {
     tr: 'التركية',
     vi: 'الفيتنامية',
     'zh-CN': 'الصينية (المبسيطة)',
-    'zh-TW': 'الصينية (التقليدية)'
-  }
-} as const;
-localeTypeCheck(arabic);
+    'zh-TW': 'الصينية (التقليدية)',
+  },
+} as const satisfies Locale;
