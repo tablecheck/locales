@@ -3,7 +3,7 @@ import { localeTypeCheck } from '../types';
 export const chineseTraditional = {
   code: 'zh-TW',
   facebook: 'zh_TW',
-  label: '繁体中文',
+  label: '繁體中文',
   loadingText: '讀取中・・・',
   aliases: ['zh-MO', 'zh-HK', 'zh-Hant'],
   translations: {
