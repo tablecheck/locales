@@ -34,10 +34,5 @@ export interface Locale {
   /**
    * All locale names in this language
    */
-  translations: {
-    [key: string]: string;
-  };
+  translations: Record<string, string>;
 }
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function localeTypeCheck(locale: Readonly<Locale>): void {}

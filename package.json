@@ -12,42 +12,39 @@
     "url": "https://github.com/tablecheck/locales/issues"
   },
   "version": "2.1.0",
-  "keywords": [
-    "locales"
-  ],
-  "main": "./lib/es5/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
-  "files": [
-    "lib"
-  ],
+  "keywords": ["locales"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
-    "audit": "tablecheck-scripts auditjs",
-    "audit:ci": "tablecheck-scripts auditjs --ci",
-    "build": "tablecheck-scripts build-lib",
-    "coverage-summary": "tablecheck-scripts coverage-summary",
-    "format": "tablecheck-scripts lint --fix --skip-typescript",
-    "lint": "tablecheck-scripts lint",
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "postinstall": "husky",
     "prepare": "npm run build",
-    "test": "tablecheck-scripts test --coverage --env=jsdom",
-    "test:watch": "tablecheck-scripts test --env=jsdom",
-    "tsc": "tablecheck-scripts tsc",
-    "tsc:watch": "tablecheck-scripts tsc -w"
+    "test": "vitest"
   },
   "devDependencies": {
-    "@auto-it/all-contributors": "11.1.6",
-    "@auto-it/first-time-contributor": "11.1.6",
-    "@auto-it/npm": "11.1.6",
-    "@auto-it/released": "11.1.6",
-    "@auto-it/slack": "11.1.6",
-    "@commitlint/cli": "11.0.0",
-    "@tablecheck/commitlint-config": "1.0.2",
-    "@tablecheck/scripts": "1.1.3",
-    "auditjs": "4.0.28",
-    "auto": "11.1.6",
-    "babel-preset-razzle": "4.0.5",
-    "husky": "7.0.1",
-    "prettier": "2.3.2",
-    "typescript": "4.3.5"
+    "@auto-it/all-contributors": "11.2.0",
+    "@auto-it/first-time-contributor": "11.2.0",
+    "@auto-it/npm": "11.2.0",
+    "@auto-it/released": "11.2.0",
+    "@auto-it/slack": "11.2.0",
+    "@commitlint/cli": "17.8.1",
+    "@tablecheck/commitlint-config": "7.0.0",
+    "@tablecheck/eslint-config": "11.0.0",
+    "@tablecheck/prettier-config": "5.0.0",
+    "auditjs": "4.0.46",
+    "auto": "11.3.0",
+    "eslint": "8.57.1",
+    "husky": "9.1.7",
+    "prettier": "3.4.2",
+    "typescript": "5.7.2",
+    "vite": "6.0.3",
+    "vitest": "2.1.8"
+  },
+  "lint-staged": {
+    "!(*.ts)": "prettier --ignore-unknown --write",
+    "*.ts": ["eslint --fix", "prettier --write"]
   }
 }

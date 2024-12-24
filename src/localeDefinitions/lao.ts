@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const lao = {
   code: 'lo',
@@ -24,7 +24,6 @@ export const lao = {
     tr: 'ພາສາຕວກກີ',
     vi: 'ພາສາຫວຽດນາມ',
     'zh-CN': '‪ພາສາຈີນ (ກາງ)‬',
-    'zh-TW': '‪ພາສາຈີນ (ດັ້ງເດີມ)‬‬‬‬'
-  }
-} as const;
-localeTypeCheck(lao);
+    'zh-TW': '‪ພາສາຈີນ (ດັ້ງເດີມ)‬‬‬‬',
+  },
+} as const satisfies Locale;

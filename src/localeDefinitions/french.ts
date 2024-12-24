@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const french = {
   code: 'fr',
@@ -24,7 +24,6 @@ export const french = {
     tr: 'Turque',
     vi: 'Vietnamienne',
     'zh-CN': 'Chinois (Simp.)',
-    'zh-TW': 'Chinois (Trad.)'
-  }
-} as const;
-localeTypeCheck(french);
+    'zh-TW': 'Chinois (Trad.)',
+  },
+} as const satisfies Locale;

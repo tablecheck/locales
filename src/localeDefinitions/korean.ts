@@ -1,4 +1,4 @@
-import { localeTypeCheck } from '../types';
+import { type Locale } from '../types';
 
 export const korean = {
   code: 'ko',
@@ -24,7 +24,6 @@ export const korean = {
     tr: '터키어',
     vi: '베트남어',
     'zh-CN': '중국어 (간체)',
-    'zh-TW': '중국어 (번체)'
-  }
-} as const;
-localeTypeCheck(korean);
+    'zh-TW': '중국어 (번체)',
+  },
+} as const satisfies Locale;
