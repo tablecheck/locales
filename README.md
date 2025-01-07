@@ -27,6 +27,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/SimeonC"><img src="https://avatars.githubusercontent.com/u/1085899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Simeon Cheeseman</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/locales/commits?author=SimeonC" title="Documentation">📖</a> <a href="#infra-SimeonC" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/tablecheck/@tablecheck/locales/commits?author=SimeonC" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/terry-seah"><img src="https://avatars.githubusercontent.com/u/169117292?v=4?s=100" width="100px;" alt=""/><br /><sub><b>terry</b></sub></a><br /><a href="https://github.com/tablecheck/@tablecheck/locales/commits?author=terry-seah" title="Code">💻</a></td>
   </tr>
 </table>
 
