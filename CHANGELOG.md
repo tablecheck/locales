@@ -1,3 +1,25 @@
+# v2.2.0 (Tue Jan 07 2025)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, terry ([@terry-seah](https://github.com/terry-seah)), for all your work!
+
+#### 🚀 Enhancement
+
+- feat: add locale resolution from accept-header and country [#9](https://github.com/tablecheck/locales/pull/9) ([@SimeonC](https://github.com/SimeonC))
+
+#### 🐛 Bug Fix
+
+- chore: fix release [#11](https://github.com/tablecheck/locales/pull/11) ([@SimeonC](https://github.com/SimeonC))
+- fix: traditional chinese label [#10](https://github.com/tablecheck/locales/pull/10) ([@terry-seah](https://github.com/terry-seah))
+
+#### Authors: 2
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+- terry ([@terry-seah](https://github.com/terry-seah))
+
+---
+
 # v2.1.0 (Wed Jul 31 2024)
 
 #### 🚀 Enhancement
