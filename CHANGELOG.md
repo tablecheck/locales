@@ -1,3 +1,15 @@
+# v2.1.1 (Tue Jan 07 2025)
+
+#### 🐛 Bug Fix
+
+- chore: fix release [#12](https://github.com/tablecheck/locales/pull/12) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.1.0 (Wed Jul 31 2024)
 
 #### 🚀 Enhancement
