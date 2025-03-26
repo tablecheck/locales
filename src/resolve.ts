@@ -107,6 +107,15 @@ function getPreferredLocales(country: string): LocaleCode[] {
       return [locales.russian.code];
     case 'PH':
       return [locales.tagalog.code];
+    case 'IL':
+      return [locales.hebrew.code];
+    case 'IN':
+      return [locales.hindi.code];
+    case 'KH':
+      return [locales.khmer.code];
+    case 'NL':
+    case 'BE':
+      return [locales.dutch.code];
     default:
       if (ARABIC_COUNTRIES.includes(country.toUpperCase())) {
         return [locales.arabic.code];

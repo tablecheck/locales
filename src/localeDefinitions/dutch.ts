@@ -1,0 +1,33 @@
+import { type Locale } from '../types';
+
+export const dutch = {
+  code: 'nl',
+  facebook: 'nl_NL',
+  label: 'Nederlands',
+  loadingText: 'Laden...',
+  translations: {
+    ar: 'Arabisch',
+    de: 'Duits',
+    en: 'Engels',
+    es: 'Spaans',
+    fr: 'Frans',
+    he: 'Hebreeuws',
+    hi: 'Hindi',
+    id: 'Indonesisch',
+    it: 'Italiaans',
+    ja: 'Japans',
+    km: 'Khmer',
+    ko: 'Koreaans',
+    lo: 'Laotiaans',
+    ms: 'Maleis',
+    nl: 'Nederlands',
+    pt: 'Portugees',
+    ru: 'Russisch',
+    th: 'Thais',
+    tl: 'Tagalog',
+    tr: 'Turks',
+    vi: 'Vietnamees',
+    'zh-CN': 'Chinees (Vereenvoudigd)',
+    'zh-TW': 'Chinees (Traditioneel)',
+  },
+} as const satisfies Locale;
