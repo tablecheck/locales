@@ -116,6 +116,8 @@ function getPreferredLocales(country: string): LocaleCode[] {
     case 'NL':
     case 'BE':
       return [locales.dutch.code];
+    case 'TR':
+      return [locales.turkish.code];
     default:
       if (ARABIC_COUNTRIES.includes(country.toUpperCase())) {
         return [locales.arabic.code];

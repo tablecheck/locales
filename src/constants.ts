@@ -19,6 +19,7 @@ import { russian } from './localeDefinitions/russian';
 import { spanish } from './localeDefinitions/spanish';
 import { tagalog } from './localeDefinitions/tagalog';
 import { thai } from './localeDefinitions/thai';
+import { turkish } from './localeDefinitions/turkish';
 import { vietnamese } from './localeDefinitions/vietnamese';
 import { type Locale } from './types';
 
@@ -45,6 +46,7 @@ export const locales = {
   hindi,
   khmer,
   dutch,
+  turkish,
 } as const;
 
 /**
@@ -73,6 +75,7 @@ export const ordered = [
   locales.hindi,
   locales.khmer,
   locales.dutch,
+  locales.turkish,
 ] as const satisfies Locale[];
 
 /**
