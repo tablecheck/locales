@@ -1,12 +1,16 @@
 import { arabic } from './localeDefinitions/arabic';
 import { chineseSimplified } from './localeDefinitions/chineseSimplified';
 import { chineseTraditional } from './localeDefinitions/chineseTraditional';
+import { dutch } from './localeDefinitions/dutch';
 import { english } from './localeDefinitions/english';
 import { french } from './localeDefinitions/french';
 import { german } from './localeDefinitions/german';
+import { hebrew } from './localeDefinitions/hebrew';
+import { hindi } from './localeDefinitions/hindi';
 import { indonesian } from './localeDefinitions/indonesian';
 import { italian } from './localeDefinitions/italian';
 import { japanese } from './localeDefinitions/japanese';
+import { khmer } from './localeDefinitions/khmer';
 import { korean } from './localeDefinitions/korean';
 import { lao } from './localeDefinitions/lao';
 import { malay } from './localeDefinitions/malay';
@@ -15,6 +19,7 @@ import { russian } from './localeDefinitions/russian';
 import { spanish } from './localeDefinitions/spanish';
 import { tagalog } from './localeDefinitions/tagalog';
 import { thai } from './localeDefinitions/thai';
+import { turkish } from './localeDefinitions/turkish';
 import { vietnamese } from './localeDefinitions/vietnamese';
 import { type Locale } from './types';
 
@@ -37,6 +42,11 @@ export const locales = {
   lao,
   vietnamese,
   arabic,
+  hebrew,
+  hindi,
+  khmer,
+  dutch,
+  turkish,
 } as const;
 
 /**
@@ -61,6 +71,11 @@ export const ordered = [
   locales.lao,
   locales.vietnamese,
   locales.arabic,
+  locales.hebrew,
+  locales.hindi,
+  locales.khmer,
+  locales.dutch,
+  locales.turkish,
 ] as const satisfies Locale[];
 
 /**

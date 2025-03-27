@@ -1,0 +1,33 @@
+import { type Locale } from '../types';
+
+export const hindi = {
+  code: 'hi',
+  facebook: 'hi_IN',
+  label: 'हिंदी',
+  loadingText: 'लोड हो रहा है...',
+  translations: {
+    ar: 'अरबी',
+    de: 'जर्मन',
+    en: 'अंग्रेज़ी',
+    es: 'स्पेनिश',
+    fr: 'फ्रेंच',
+    he: 'हिब्रू',
+    hi: 'हिंदी',
+    id: 'इंडोनेशियाई',
+    it: 'इतालवी',
+    ja: 'जापानी',
+    km: 'खमेर',
+    ko: 'कोरियाई',
+    lo: 'लाओ',
+    ms: 'मलय',
+    nl: 'डच',
+    pt: 'पुर्तगाली',
+    ru: 'रूसी',
+    th: 'थाई',
+    tl: 'तागालोग',
+    tr: 'तुर्की',
+    vi: 'वियतनामी',
+    'zh-CN': 'चीनी (सरलीकृत)',
+    'zh-TW': 'चीनी (पारंपरिक)',
+  },
+} as const satisfies Locale;

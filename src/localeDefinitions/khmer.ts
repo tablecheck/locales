@@ -1,0 +1,33 @@
+import { type Locale } from '../types';
+
+export const khmer = {
+  code: 'km',
+  facebook: 'km_KH',
+  label: 'ខ្មែរ',
+  loadingText: 'កំពុងផ្ទុក...',
+  translations: {
+    ar: 'អារ៉ាប់',
+    de: 'អាល្លឺម៉ង់',
+    en: 'អង់គ្លេស',
+    es: 'អេស្ប៉ាញ',
+    fr: 'បារាំង',
+    he: 'ហេប្រូ',
+    hi: 'ហិណ្ឌី',
+    id: 'ឥណ្ឌូនេស៊ី',
+    it: 'អ៊ីតាលី',
+    ja: 'ជប៉ុន',
+    km: 'ខ្មែរ',
+    ko: 'កូរ៉េ',
+    lo: 'ឡាវ',
+    ms: 'ម៉ាឡេ',
+    nl: 'ហូឡង់',
+    pt: 'ព័រទុយហ្កាល់',
+    ru: 'រុស្ស៊ី',
+    th: 'ថៃ',
+    tl: 'តាហ្កាឡុក',
+    tr: 'ទួរគី',
+    vi: 'វៀតណាម',
+    'zh-CN': 'ចិន (អក្សរកាត់)',
+    'zh-TW': 'ចិន (អក្សរពេញ)',
+  },
+} as const satisfies Locale;

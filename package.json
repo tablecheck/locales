@@ -12,15 +12,11 @@
     "url": "https://github.com/tablecheck/locales/issues"
   },
   "version": "2.3.1",
-  "keywords": [
-    "locales"
-  ],
+  "keywords": ["locales"],
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
     "lint": "eslint .",
@@ -34,10 +30,9 @@
     "@auto-it/npm": "11.2.0",
     "@auto-it/released": "11.2.0",
     "@auto-it/slack": "11.2.0",
-    "@commitlint/cli": "17.8.1",
-    "@tablecheck/commitlint-config": "7.0.0",
     "@tablecheck/eslint-config": "11.0.0",
     "@tablecheck/prettier-config": "5.0.0",
+    "@types/node": "22.13.13",
     "auditjs": "4.0.46",
     "auto": "11.3.0",
     "eslint": "8.57.1",
@@ -49,9 +44,6 @@
   },
   "lint-staged": {
     "!(*.ts)": "prettier --ignore-unknown --write",
-    "*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "*.ts": ["eslint --fix", "prettier --write"]
   }
 }
