@@ -1,3 +1,15 @@
+# v2.4.0 (Thu Mar 27 2025)
+
+#### 🚀 Enhancement
+
+- Add turkish, dutch, hebrew, hindi and Khmer locales [#13](https://github.com/tablecheck/locales/pull/13) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.1.1 (Tue Jan 07 2025)
 
 #### 🐛 Bug Fix
