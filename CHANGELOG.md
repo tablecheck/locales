@@ -1,3 +1,15 @@
+# v2.4.1 (Mon Mar 31 2025)
+
+#### 🐛 Bug Fix
+
+- Fix add missing translations to lao and add a checker step [#14](https://github.com/tablecheck/locales/pull/14) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.4.0 (Thu Mar 27 2025)
 
 #### 🚀 Enhancement
