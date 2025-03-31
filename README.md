@@ -7,15 +7,29 @@ TableCheck's shared locale definition files and functions
 #### Prerequisites
 
 - Install [nvm](https://github.com/nvm-sh/nvm)
+- Install [bun](https://bun.sh) (needed for translation checks)
 
 #### Installation
 
-To setup your development environment please run these commands in order.
-
 ```shell
-nvm use
 npm ci --legacy-peer-deps
 ```
+
+## Development Workflow
+
+### Translation Checks
+
+This repository includes automated checks to ensure all locale files have complete translations.
+
+To manually check if all locales have complete translations:
+
+```shell
+npm run check-translations
+```
+
+This check will also run during CI/CD workflows and fail if any translations are missing.
+
+When adding a new locale, ensure it includes translations for all existing locale codes. Similarly, when adding a new locale code to an existing locale, add translations for it to all other locale files.
 
 ## Contributors ✨
 

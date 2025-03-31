@@ -1,2 +1,3 @@
 #!/bin/sh
 npx lint-staged
+bun run scripts/check-translations.ts
