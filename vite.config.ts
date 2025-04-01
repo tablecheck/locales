@@ -6,9 +6,24 @@ export default defineConfig(({ command }) => ({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      formats: ['es', 'cjs'],
+      formats: ['es'],
       fileName: (format, entryName) =>
         basename(entryName, 'tsx') + (format === 'es' ? '.js' : '.cjs'),
+    },
+    target: 'es2019',
+    rollupOptions: {
+      output: [
+        {
+          format: 'es',
+          preserveModules: true,
+        },
+      ],
+    },
+  },
+  esbuild: {
+    target: 'es2019',
+    supported: {
+      'nullish-coalescing': false,
     },
   },
   define:
