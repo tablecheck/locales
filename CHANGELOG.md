@@ -1,3 +1,15 @@
+# v2.4.2 (Tue Apr 01 2025)
+
+#### 🐛 Bug Fix
+
+- Fix build to support older build tooling [#16](https://github.com/tablecheck/locales/pull/16) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.4.1 (Mon Mar 31 2025)
 
 #### 🐛 Bug Fix
