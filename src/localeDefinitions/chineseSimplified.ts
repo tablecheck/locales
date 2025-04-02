@@ -28,7 +28,7 @@ export const chineseSimplified = {
     tl: '菲律宾语',
     tr: '土耳其语',
     vi: '越南语',
-    'zh-CN': '‪简体中文‬',
+    'zh-CN': '简体中文',
     'zh-TW': '繁体中文',
   },
 } as const satisfies Locale;

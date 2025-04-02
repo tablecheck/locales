@@ -12,20 +12,17 @@
     "url": "https://github.com/tablecheck/locales/issues"
   },
   "version": "2.4.2",
-  "keywords": [
-    "locales"
-  ],
+  "keywords": ["locales"],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
     "lint": "eslint .",
     "prepare": "npm run build",
-    "test": "vitest"
+    "test": "vitest",
+    "update-locale-definitions": "bun scripts/updateLocalDefinitions.ts"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "11.2.0",
@@ -35,21 +32,20 @@
     "@auto-it/slack": "11.2.0",
     "@tablecheck/eslint-config": "11.0.0",
     "@tablecheck/prettier-config": "5.0.0",
+    "@types/bun": "1.2.8",
     "@types/node": "22.13.13",
     "auditjs": "4.0.46",
     "auto": "11.3.0",
     "eslint": "8.57.1",
     "husky": "9.1.7",
     "prettier": "3.4.2",
+    "ts-morph": "25.0.1",
     "typescript": "5.7.2",
     "vite": "6.0.3",
     "vitest": "2.1.8"
   },
   "lint-staged": {
     "**/!(*.ts)": "prettier --ignore-unknown --write",
-    "**/*.ts": [
-      "eslint --fix",
-      "prettier --write"
-    ]
+    "**/*.ts": ["eslint --fix", "prettier --write"]
   }
 }

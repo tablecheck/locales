@@ -27,7 +27,7 @@ export const malay = {
     tl: 'Bahasa Filipina',
     tr: 'Bahasa Turki',
     vi: 'Bahasa Vietnam',
-    'zh-CN': '‪Bahasa Cina (dimudah.)',
-    'zh-TW': '‪Bahasa Cina (trad.)',
+    'zh-CN': 'Bahasa Cina (dimudah.)',
+    'zh-TW': 'Bahasa Cina (trad.)',
   },
 } as const satisfies Locale;

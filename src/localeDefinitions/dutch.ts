@@ -24,10 +24,10 @@ export const dutch = {
     pt: 'Portugees',
     ru: 'Russisch',
     th: 'Thais',
-    tl: 'Tagalog',
+    tl: 'Filipijns',
     tr: 'Turks',
     vi: 'Vietnamees',
-    'zh-CN': 'Chinees (Vereenvoudigd)',
-    'zh-TW': 'Chinees (Traditioneel)',
+    'zh-CN': 'Chinees (Vereenv.)',
+    'zh-TW': 'Chinees (Trad.)',
   },
 } as const satisfies Locale;

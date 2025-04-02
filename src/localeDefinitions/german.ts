@@ -25,9 +25,9 @@ export const german = {
     ru: 'Russisch',
     th: 'Thai',
     tl: 'Philippinisch',
-    tr: 'Türkisch',
+    tr: 'Türkische',
     vi: 'Vietnamesisch',
-    'zh-CN': '‪Chinesisch (Einf.)',
-    'zh-TW': '‪Chinesisch (Trad.)',
+    'zh-CN': 'Chinesisch (Einf.)',
+    'zh-TW': 'Chinesisch (Trad.)',
   },
 } as const satisfies Locale;

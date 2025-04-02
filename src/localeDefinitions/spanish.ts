@@ -20,7 +20,7 @@ export const spanish = {
     ko: 'Coreano',
     lo: 'Lao',
     ms: 'Malayo',
-    nl: 'Neerlandés',
+    nl: 'Holandés',
     pt: 'Portuguesa',
     ru: 'Ruso',
     th: 'Tailandés',
