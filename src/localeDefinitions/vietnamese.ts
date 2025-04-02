@@ -12,7 +12,7 @@ export const vietnamese = {
     es: 'Tiếng Tây Ban Nha',
     fr: 'Tiếng Pháp',
     he: 'Tiếng Do Thái',
-    hi: 'Tiếng Hin-đi',
+    hi: 'Tiếng Hindi',
     id: 'Tiếng Indonesia',
     it: 'Tiếng Ý',
     ja: 'Tiếng Nhật',

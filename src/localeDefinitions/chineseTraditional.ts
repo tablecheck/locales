@@ -12,7 +12,7 @@ export const chineseTraditional = {
     en: '英語',
     es: '西班牙語',
     fr: '法國語',
-    he: '希伯來文',
+    he: '希伯來語',
     hi: '印地語',
     id: '印度尼西亞語',
     it: '意大利語',
