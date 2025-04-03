@@ -1,3 +1,15 @@
+# v2.4.3 (Thu Apr 03 2025)
+
+#### 🐛 Bug Fix
+
+- Update locale translations from Monolith with a new script [#17](https://github.com/tablecheck/locales/pull/17) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.4.2 (Tue Apr 01 2025)
 
 #### 🐛 Bug Fix
