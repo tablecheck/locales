@@ -1,3 +1,15 @@
+# v2.4.4 (Thu Apr 03 2025)
+
+#### 🐛 Bug Fix
+
+- Re-adding in an es5 build for manager in particular [#18](https://github.com/tablecheck/locales/pull/18) ([@SimeonC](https://github.com/SimeonC))
+
+#### Authors: 1
+
+- Simeon Cheeseman ([@SimeonC](https://github.com/SimeonC))
+
+---
+
 # v2.4.3 (Thu Apr 03 2025)
 
 #### 🐛 Bug Fix
