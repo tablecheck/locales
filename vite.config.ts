@@ -6,16 +6,19 @@ export default defineConfig(({ command }) => ({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      formats: ['es'],
+      formats: ['es', 'cjs'],
       fileName: (format, entryName) =>
-        basename(entryName, 'tsx') + (format === 'es' ? '.js' : '.cjs'),
+        basename(entryName, 'tsx') + (format === 'es' ? '.mjs' : '.js'),
     },
-    target: 'es2019',
+    target: ['es2015'],
     rollupOptions: {
       output: [
         {
           format: 'es',
           preserveModules: true,
+        },
+        {
+          format: 'cjs',
         },
       ],
     },
