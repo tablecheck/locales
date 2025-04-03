@@ -11,13 +11,17 @@
   "bugs": {
     "url": "https://github.com/tablecheck/locales/issues"
   },
-  "version": "2.4.2",
-  "keywords": ["locales"],
+  "version": "2.4.3",
+  "keywords": [
+    "locales"
+  ],
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "vite build && tsc -p tsconfig.build.json",
     "lint": "eslint .",
@@ -47,6 +51,9 @@
   },
   "lint-staged": {
     "**/!(*.ts)": "prettier --ignore-unknown --write",
-    "**/*.ts": ["eslint --fix", "prettier --write"]
+    "**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
