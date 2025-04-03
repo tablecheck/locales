@@ -21,3 +21,4 @@ junit
 .env.test.local
 .env.production.local
 .@tablecheck
+temp/

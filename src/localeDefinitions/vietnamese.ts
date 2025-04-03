@@ -27,7 +27,7 @@ export const vietnamese = {
     tl: 'Tiếng Filipino',
     tr: 'Tiếng Thổ Nhĩ Kỳ',
     vi: 'Tiếng Việt',
-    'zh-CN': '‪Tiếng Trung (Giản thể)‬‬‬',
-    'zh-TW': 'Tiếng Trung (Phồn thể)‬',
+    'zh-CN': 'Tiếng Trung (Giản thể)',
+    'zh-TW': 'Tiếng Trung (Phồn thể)',
   },
 } as const satisfies Locale;

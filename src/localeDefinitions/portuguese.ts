@@ -27,7 +27,7 @@ export const portuguese = {
     tl: 'Filipina',
     tr: 'Turco',
     vi: 'Vietnamita',
-    'zh-CN': '‪Chinês (Simp.)',
-    'zh-TW': '‪Chinês (Trad.)',
+    'zh-CN': 'Chinês (Simp.)',
+    'zh-TW': 'Chinês (Trad.)',
   },
 } as const satisfies Locale;

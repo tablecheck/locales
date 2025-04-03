@@ -27,7 +27,7 @@ export const italian = {
     tl: 'Filippina',
     tr: 'Turca',
     vi: 'Vietnamita',
-    'zh-CN': '‪Chinese (simp.)',
-    'zh-TW': '‪Chinese (trad.)',
+    'zh-CN': 'Chinese (simp.)',
+    'zh-TW': 'Chinese (trad.)',
   },
 } as const satisfies Locale;

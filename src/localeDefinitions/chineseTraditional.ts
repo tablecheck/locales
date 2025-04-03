@@ -18,7 +18,7 @@ export const chineseTraditional = {
     it: '意大利語',
     ja: '日語',
     km: '高棉語',
-    ko: '韩語',
+    ko: '韓語',
     lo: '老撾語',
     ms: '馬來語',
     nl: '荷蘭語',
@@ -28,7 +28,7 @@ export const chineseTraditional = {
     tl: '菲律賓語',
     tr: '土耳其語',
     vi: '越南語',
-    'zh-CN': '‪簡體中文‬',
+    'zh-CN': '簡體中文',
     'zh-TW': '繁體中文',
   },
 } as const satisfies Locale;

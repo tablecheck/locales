@@ -21,7 +21,7 @@ export const spanish = {
     lo: 'Lao',
     ms: 'Malayo',
     nl: 'Neerlandés',
-    pt: 'Portuguesa',
+    pt: 'Portugués',
     ru: 'Ruso',
     th: 'Tailandés',
     tl: 'Filipina',

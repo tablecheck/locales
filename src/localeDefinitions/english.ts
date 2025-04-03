@@ -27,7 +27,7 @@ export const english = {
     tl: 'Filipino',
     tr: 'Turkish',
     vi: 'Vietnamese',
-    'zh-CN': '‪Chinese (Simp.)',
-    'zh-TW': '‪Chinese (Trad.)',
+    'zh-CN': 'Chinese (Simp.)',
+    'zh-TW': 'Chinese (Trad.)',
   },
 } as const satisfies Locale;
